@@ -9,7 +9,7 @@ function checkLoggedIn() {
     const loggedInUser = sessionStorage.getItem('loggedInUser');
 
     if (!loggedInUser && !isLoginPage()) {
-        window.location.href = '/index.html';
+        window.location.href = '/DW-25-Squads/index.html';
         return;
     }
 
@@ -21,7 +21,7 @@ function checkLoggedIn() {
 
 function isLoginPage() {
     return (
-        window.location.pathname.endsWith('/index.html') ||
+        window.location.pathname.endsWith('/DW-25-Squads/index.html') ||
         window.location.pathname === '/'
     );
 }
@@ -60,17 +60,17 @@ document.getElementById('logoutButton')?.addEventListener('click', () => logout(
 function redirectToRolePage(role) {
     switch (role) {
         case 'gestao':
-            window.location.href = '/gestao.html';
+            window.location.href = '/DW-25-Squads/gestao.html';
             break;
         case 'lancamento':
-            window.location.href = '/lancamento.html';
+            window.location.href = '/DW-25-Squads/lancamento.html';
             break;
         default:
-            window.location.href = '/index.html';
+            window.location.href = '/DW-25-Squads/index.html';
     }
 }
 
 function logout() {
     sessionStorage.removeItem('loggedInUser');
-    window.location.href = '/index.html';
+    window.location.href = '/DW-25-Squads/index.html';
 }
