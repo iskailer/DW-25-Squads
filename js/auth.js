@@ -3,13 +3,16 @@ const mockedUsers = [
     { username: 'user', password: 'user123', role: 'lancamento' }
 ];
 
+const isProduction = window.location.pathname.includes('/DW-25-Squads/');
+const BASE_PATH = isProduction ? '/DW-25-Squads' : '';
+
 window.addEventListener('DOMContentLoaded', () => checkLoggedIn());
 
 function checkLoggedIn() {
     const loggedInUser = sessionStorage.getItem('loggedInUser');
 
     if (!loggedInUser && !isLoginPage()) {
-        window.location.href = '/DW-25-Squads/index.html';
+        window.location.href = `${BASE_PATH}/index.html`;
         return;
     }
 
@@ -20,9 +23,11 @@ function checkLoggedIn() {
 }
 
 function isLoginPage() {
+    const currentPath = window.location.pathname;
     return (
-        window.location.pathname.endsWith('/DW-25-Squads/index.html') ||
-        window.location.pathname === '/'
+        currentPath.endsWith(`${BASE_PATH}/index.html`) ||
+        currentPath === `${BASE_PATH}/` ||
+        currentPath === `${BASE_PATH}`
     );
 }
 
@@ -60,17 +65,17 @@ document.getElementById('logoutButton')?.addEventListener('click', () => logout(
 function redirectToRolePage(role) {
     switch (role) {
         case 'gestao':
-            window.location.href = '/DW-25-Squads/gestao.html';
+            window.location.href = `${BASE_PATH}/gestao.html`;
             break;
         case 'lancamento':
-            window.location.href = '/DW-25-Squads/lancamento.html';
+            window.location.href = `${BASE_PATH}/lancamento.html`;
             break;
         default:
-            window.location.href = '/DW-25-Squads/index.html';
+            window.location.href = `${BASE_PATH}/index.html`;
     }
 }
 
 function logout() {
     sessionStorage.removeItem('loggedInUser');
-    window.location.href = '/DW-25-Squads/index.html';
+    window.location.href = `${BASE_PATH}/index.html`;
 }
