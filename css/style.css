@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Nunito', 'Montserrat';
+    background: linear-gradient(to bottom right, #f2f4ff, #dbe4ff);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.container {
+    background: url('../img/task.jpg') no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 2rem 3rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    max-width: 400px;
+    width: 100%;
+    position: relative;
+    text-align: center;
+}
+
+.login-box h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    border: 2px solid #c0c0c0;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #f4f4f4;
+}
+
+.input-group .icon {
+    padding: 0.8rem;
+    background-color: #e0e0e0;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+}
+
+.input-group input {
+    border: none;
+    outline: none;
+    padding: 0.8rem;
+    flex: 1;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+button {
+    background-color: #4f56f1;
+    color: white;
+    border: none;
+    padding: 0.9rem;
+    border-radius: 10px;
+    width: 100%;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #3d44d0;
+}
+
+.forgot {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+}
+
+.forgot span {
+    color: #a0a0a0;
+}
+
+.forgot a {
+    color: #3d44d0;
+    text-decoration: none;
+    margin-left: 0.3rem;
+}
+
+.img {
+    width: 80px;
+    height: 60px;
+    background: url('../img/taskimg.png') no-repeat center center;
+    background-size: contain;
+    margin: 0 auto 1rem;
+}

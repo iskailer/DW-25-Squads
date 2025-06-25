@@ -1,6 +1,6 @@
 const mockedUsers = [
-    { username: 'admin', password: 'admin123', role: 'gestao' },
-    { username: 'user', password: 'user123', role: 'lancamento' }
+    { username: 'admin@trabalho.com', password: 'admin123', role: 'gestao' },
+    { username: 'user@trabalho.com', password: 'user123', role: 'lancamento' }
 ];
 
 const isProduction = window.location.pathname.includes('/DW-25-Squads/');
@@ -10,7 +10,6 @@ window.addEventListener('DOMContentLoaded', () => checkLoggedIn());
 
 function checkLoggedIn() {
     const loggedInUser = sessionStorage.getItem('loggedInUser');
-
     if (!loggedInUser && !isLoginPage()) {
         window.location.href = `${BASE_PATH}/index.html`;
         return;
@@ -31,11 +30,11 @@ function isLoginPage() {
     );
 }
 
-document.getElementById('loginForm')?.addEventListener('submit', function (e) {
+document.addEventListener('submit', function (e) {
     e.preventDefault();
 
-    const username = document.getElementById('username').value.trim();
-    const password = document.getElementById('password').value.trim();
+    const username = document.getElementById('email').value.trim();
+    const password = document.getElementById('senha').value.trim();
 
     if (!username || !password) {
         alert('Por favor, preencha todos os campos');
@@ -61,6 +60,10 @@ document.getElementById('loginForm')?.addEventListener('submit', function (e) {
 });
 
 document.getElementById('logoutButton')?.addEventListener('click', () => logout());
+
+document.querySelectorAll('.forgot').forEach(element => {
+    element.addEventListener('click', () => alert("Não tem como recuperar 👍"));
+});
 
 function redirectToRolePage(role) {
     switch (role) {

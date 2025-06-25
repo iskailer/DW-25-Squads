@@ -1,24 +1,39 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body>
-    <h1>Tela de Login</h1>
-    <form id="loginForm">
-        <div>
-            <label for="username">Usuário:</label>
-            <input type="text" id="username" required>
-        </div>
-        <div>
-            <label for="password">Senha:</label>
-            <input type="password" id="password" required>
-        </div>
-        <button type="submit">Entrar</button>
-    </form>
+<html lang="pt-br">
 
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-box">
+            <div class="img"></div>
+            <h2>Login</h2>
+            <form>
+                <div class="input-group">
+                    <span class="icon"><i class="bi bi-person-fill"></i></span>
+                    <input type="email" id="email" placeholder="Digite seu email" required />
+                </div>
+                <div class="input-group">
+                    <span class="icon"><i class="bi bi-lock-fill"></i></span>
+                    <input type="password" id="senha" placeholder="Digite sua senha" required />
+                </div>
+                <button type="submit">Login</button>
+                <p class="forgot">
+                    <span>Esqueceu sua senha?</span>
+                    <a href="#">Clique aqui</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    
     <script src="./js/auth.js"></script>
 </body>
+
 </html>
