@@ -1,0 +1,16 @@
+{
+    "name": "DW-25 Squads",
+    "short_name": "Squads",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#007bff",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "/img/taskimg.png",
+        "type": "image/png",
+        "sizes": "512x512"
+      }
+    ]
+  }
