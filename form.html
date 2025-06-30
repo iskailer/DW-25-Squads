@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Criador de Formulário</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/form.css" />
+</head>
+
+<body class="bg-light">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark container py-4">
+      <a class="navbar-brand d-flex align-items-center" href="#">
+        <i class="bi bi-journal-text me-2 fs-3"></i>
+        <h1 class="mb-0 fs-4">Formulários Inteligentes</h1>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end mt-3 mt-lg-0" id="navbarNav">
+
+        <div class="d-flex flex-wrap gap-3">
+          <a href="gestao.html" class="btn btn-success btn-lg">
+            <i class="bi bi-bar-chart"></i> Gestão
+          </a>
+          <a href="lancamento.html" class="btn btn-light btn-lg">
+            <i class="bi bi-bookmark-check"></i> Lançamento
+          </a>
+          <a href="index.html" class="btn btn-outline-light btn-lg">
+            <i class="bi bi-arrow-bar-left"></i> Sair
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container my-5">
+    <h2>Criar Novo Formulário</h2>
+    <form id="formFormulario">
+      <div class="mb-3">
+        <label class="form-label">Título do Formulário</label>
+        <input type="text" class="form-control" id="titulo" required />
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Descrição</label>
+        <textarea class="form-control" id="descricao" required></textarea>
+      </div>
+      <div id="perguntasContainer"></div>
+      <button type="button" class="btn btn-secondary mb-3" onclick="adicionarPergunta()">+ Adicionar Pergunta</button><br />
+      <button type="submit" class="btn btn-success">Salvar Formulário</button>
+    </form>
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.3.1/dist/pouchdb.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="/js/form.js"></script>
+</body>
+
+</html>
