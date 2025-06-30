@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Editar Formulário</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-light">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark container py-4">
+             <a class="navbar-brand d-flex align-items-center" href="#">
+                <i class="bi bi-journal-text me-2 fs-3"></i>
+                <h1 class="mb-0 fs-4">Formulários Inteligentes</h1>
+            </a>
+        </nav>
+    </header>
+
+    <div class="container my-5">
+        <h2>Editar Formulário</h2>
+        <form id="formFormulario">
+            <input type="hidden" id="formRev">
+
+            <div class="mb-3">
+                <label class="form-label">Título do Formulário</label>
+                <input type="text" class="form-control" id="titulo" required />
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Descrição</label>
+                <textarea class="form-control" id="descricao" required></textarea>
+            </div>
+            <div id="perguntasContainer"></div>
+            <button type="button" class="btn btn-secondary mb-3" id="addPerguntaBtn">+ Adicionar Pergunta</button><br />
+            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+            <a href="gestao.html" class="btn btn-light">Cancelar</a>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/pouchdb@7.3.1/dist/pouchdb.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/edicao.js"></script>
+</body>
+</html>
