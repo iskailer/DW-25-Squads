@@ -55,13 +55,3 @@ self.addEventListener('fetch', (event) => {
     })
   );
 });
-
-function addServiceWorker() {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('./service-worker.js')
-      .then(() => console.log('✅ Service Worker registrado com sucesso'))
-      .catch((error) => console.error('❌ Falha ao registrar Service Worker:', error));
-  }
-}
-
-addServiceWorker();
