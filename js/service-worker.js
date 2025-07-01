@@ -4,13 +4,14 @@ const URLS_TO_CACHE = [
   '/index.html',
   '/gestao.html',
   '/lancamento.html',
-
   '/css/style.css',
-
+  '/css/login.css',
   '/js/service-worker.js',
   '/js/app.js',
   '/js/auth.js',
   '/manifest.json',
+  '/img/task.jpg',
+  '/img/taskimg.png'
 ];
 
 self.addEventListener('install', (event) => {
@@ -57,7 +58,7 @@ self.addEventListener('fetch', (event) => {
 
 function addServiceWorker() {
   if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/js/service-worker.js')
+    navigator.serviceWorker.register('./service-worker.js')
       .then(() => console.log('✅ Service Worker registrado com sucesso'))
       .catch((error) => console.error('❌ Falha ao registrar Service Worker:', error));
   }
